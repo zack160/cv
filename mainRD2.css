@@ -1,0 +1,302 @@
+/* css reset */
+*{
+    margin: 0;
+    padding: 0;
+}
+/* expeiment area */
+
+body{
+    height: 100vh;
+}
+
+
+/* HTML */
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* variables */
+
+:root{
+    --font: cursive;
+    --bgprimary-color: rgb(191, 239, 255);
+    --border-color: rgb(83, 212, 255);
+    --width: 98vw;
+
+}
+
+/* ==============================PreDesigned elements=========================== */
+
+hr{
+    border: dotted #def8f8 6px;
+    border-bottom: none;
+    width: 3em;
+    margin: 100px auto;
+}
+
+a{
+    color: deepskyblue;
+}
+
+.btn{
+    padding: 9px 34px;
+    margin: 15px 0;
+    font-size: 17px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    color: var(--border-color);
+    background-color: white;
+    cursor: pointer;
+    transition-property: all;
+    transition-duration: 280ms;
+    transition-timing-function: ease-out;
+}
+.btn:hover{
+    background-color: var(--border-color);
+    color: white;
+}
+.btn-sm{
+    padding: 9px 34px;
+    margin: 2px 3px;
+    font-size: 17px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    color: var(--border-color);
+    background-color: white;
+    cursor: pointer;
+    transition-property: all;
+    transition-duration: 280ms;
+    transition-timing-function: ease-out;
+}
+.btn:hover{
+    background-color: var(--border-color);
+    color: white;
+}
+
+/* ==============================Navbar=========================== */
+
+.navbar{
+    font-family: var(--font);
+    z-index: 5;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    background-color: var(--bgprimary-color);
+}
+
+/* navbar logo */
+#logo{
+    cursor: pointer;
+    width: 45px;
+    height: 44px;
+    border: 2px solid var(--border-color);
+    border-radius: 25px;
+    margin: 8px 20px;
+}
+
+/* nav-list */
+.nav-list{
+    display: flex;
+}
+
+.nav-list .list-items{
+    list-style: none;
+    font-size: 1.1em;
+    padding: 20px 6px;
+}
+
+.nav-list .list-items a{
+    color: white;
+    text-decoration: none;
+    margin-left: 31px;
+    font-size: 18px;
+}
+
+.nav-list .list-items a:hover{
+    color: rgb(238, 245, 248);
+}
+/* ==============================Header=========================== */
+
+.head{
+    margin-top: 65px;
+}
+
+.btn-head{
+    width: 99%;
+    padding: 4px 4px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+.boxes-container{
+    margin: 47px auto;
+    width: 99%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1em;
+}
+
+.box{
+    text-align: center;
+    line-height: 1.1;
+}
+
+.box-h1{
+    font-family: var(--font);
+    font-size: 2.1em;
+    padding: 0 9px;
+    padding-bottom: 0.3em;
+    line-height: 1.4;
+}
+
+.box-highlight{
+    background-color: var(--bgprimary-color);
+    border-radius: 9px;
+}
+/* ==============================header responsive=========================== */
+
+@media only screen and (max-width:1132px){
+    .boxes-container{
+        margin: 47px auto;
+        width: 99%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1em;
+    }
+}
+
+/* ==============================section=========================== */
+
+/* about section */
+
+.main{
+    text-align: center;
+    width: 65%;
+    margin: auto;
+    margin-top: 4em;
+}
+
+/* about section image */
+
+.main-img{
+    height: 20em;
+    width: 20em;
+    border: 2px solid white;
+    border-radius: 202px;
+    margin: 0 -60px;
+}
+
+.main2-img{
+    height: 14em;
+    width: 14em;
+    border-radius: 202px;
+    margin: 1.6em;
+}
+/* about section contant */
+
+.main-h1{
+    font-family: var(--font);
+    font-size: 3em;
+    padding-bottom: 0.3em;
+}
+
+.main-p{
+    font-family: var(--font);
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: rgb(36, 34, 34);
+}
+/* ==============================footer=========================== */
+
+footer{
+    background-color: var(--bgprimary-color);
+    height: 100px;
+    margin-top: 73px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+footer p{
+    padding: 0 10px;
+}
+
+/* ==============================projectRD2 responsive=========================== */
+/* navbar */
+.burger{
+    display: none;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    cursor: pointer;
+    margin: 10px 20px;
+}
+
+.burger .line{
+    width: 33px;
+    background-color: white;
+    height: 4px;
+    margin: 4.9px 4px;
+}
+
+@media only screen and (max-width: 415px){
+    footer{
+        width: 101%;
+    }
+    .main{
+        width: 83%;
+    }
+    .main-p{
+     text-align: justify;
+    }
+    
+}
+
+@media only screen and (max-width: 750px){
+    .main-p{
+        text-align: justify;
+    }
+    .boxes-container{
+        margin: 47px auto;
+        width: 99%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 6em;
+    }
+    .navbar{
+        flex-direction: column;
+        justify-content: center;
+        height: 277px;
+        transition: all 362ms ease-out;
+    }
+    .nav-list{
+        flex-direction: column;
+        text-align: center;
+    }
+    .nav-list .list-items{
+        padding: 12px 0;
+    }
+    .nav-list .list-items a{
+        margin: 0;
+        padding: 5px;
+    }
+    .burger{
+        display: block;
+    }
+    .h-nav{
+        height: 62px;
+    }
+    .v-class{
+        display: none;
+    }
+}
